@@ -51,8 +51,14 @@ class Producto(models.Model):
     imagen      = models.ImageField('Foto', upload_to= "fotos" )
     usado       = models.BooleanField( default= False)
     publicar    = models.BooleanField()
-    def __str__(self):
-          return '%s, rodado %s '  % (self.tipo, self.rodado)
+
+    if usado == True:
+        def __str__(self):
+              return '%s usada, rodado %s '  % (self.tipo, self.rodado)
+    else:
+        def __str__(self):
+              return '%s nueva, rodado %s '  % (self.tipo, self.rodado)
+
 
 #---------------------------------------------------------------------------------------------------------------#
 class Estado_Pedido(models.Model):
