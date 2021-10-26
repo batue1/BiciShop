@@ -18,7 +18,7 @@ admin.site.register(Estado_Pedido)
 #---------------------------------------------------------------------------------------------------------------#
 #Configuraciónes
 class AdminProducto(admin.ModelAdmin):
-    list_display=("tipo","rodado","color","material", "descripcion", "precio", "descuento", "cantidad", "foto", "publicar")
+    list_display=("tipo","rodado","color","material", "descripcion", "precio", "descuento", "cantidad", "foto", "usado","publicar")
     list_filter=("tipo","rodado","color","material")
     search_fields = ("tipo","rodado","color","material","descripcion")
     ordering = ("tipo",)

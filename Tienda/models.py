@@ -49,6 +49,7 @@ class Producto(models.Model):
     descuento   = models.DecimalField(max_digits=5, decimal_places=2, default=0.00)
     cantidad    = models.IntegerField(null= False, default= 0)
     imagen      = models.ImageField('Foto', upload_to= "fotos" )
+    usado       = models.BooleanField( default= False)
     publicar    = models.BooleanField()
     def __str__(self):
           return '%s, rodado %s '  % (self.tipo, self.rodado)
