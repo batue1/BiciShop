@@ -17,9 +17,14 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
+from Usuarios.views import loginPage, register, home, logoutUser
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('login/', loginPage,  name='login'),
+    path('logout/', logoutUser,  name='logout'),
+    path('register/', register, name='register'),
+    path('home/', home,  name='home'),
 ]
 
 #Ojo no sirve para producción
