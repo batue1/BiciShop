@@ -1,6 +1,6 @@
 from django.db import models
+from Usuarios.models import User
 from django.core.validators import MaxLengthValidator, MaxValueValidator, MinValueValidator
-from django.contrib.auth.models import User
 
 
 # Create your models here.
@@ -77,7 +77,7 @@ class Forma_Pago(models.Model):
 #---------------------------------------------------------------------------------------------------------------#
 class Pedidos_Cabecera(models.Model):
     pedido       = models.AutoField(primary_key= True) 
-    cliente      = models.ForeignKey(User,on_delete=models.SET_NULL, null=True)
+    cliente      = models.ForeignKey(User,on_delete=models.SET_NULL, blank=True, null=True)
     fechahora    = models.DateTimeField(auto_now=True, auto_now_add=False)
     formaPago    = models.ForeignKey(Forma_Pago, on_delete=models.SET_NULL, blank= False, null= True)
     estadoPedido = models.ForeignKey(Estado_Pedido, on_delete=models.SET_NULL, blank= False, null= True)
