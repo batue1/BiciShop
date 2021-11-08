@@ -18,6 +18,7 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from Usuarios.views import loginPage, register, home, logoutUser
+from LandingPage.views import LandingPage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,6 +26,8 @@ urlpatterns = [
     path('logout/', logoutUser,  name='logout'),
     path('register/', register, name='register'),
     path('home/', home,  name='home'),
+    path('', LandingPage.as_view(),  name='landing_page'),
+
 ]
 
 #Ojo no sirve para producción
