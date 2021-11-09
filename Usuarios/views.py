@@ -6,7 +6,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 
-# Formulario para creación de usuario
+## Formulario para creación de usuario
 class CreateUserForm(UserCreationForm):
     class Meta:
         model = User
@@ -33,7 +33,7 @@ def register(request):
     context = {'form': form}
     return render(request, 'register.html', context)
 
-#-------------------------------------------------------------------------------------#
+#------------------------------------------------------------------------------------#
 def loginPage(request):
     if request.user.is_authenticated:
         return redirect('home')
