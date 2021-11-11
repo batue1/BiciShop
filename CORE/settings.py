@@ -129,9 +129,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / "/Tienda/static/",
-
+    BASE_DIR / "CORE/static/",
 ]
+
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'CORE/static'),)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -141,9 +142,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #---------------------------------------------------------------------------------------------------------------#
 #La siguiente lógica es para las imágenes que se van a cargar.
 # Para cuando se consulte por una imagen mediante URL
-MEDIA_URL = '/media/'
+MEDIA_URL = 'CORE/static/mediaimg/'
 # Donde la carpeta esta alojada
-MEDIA_ROOT = os.path.join(BASE_DIR / "media")
+#MEDIA_ROOT = os.path.join(BASE_DIR / "media")
+MEDIA_ROOT = os.path.join(BASE_DIR / "CORE/static/mediaimg/")
+
 
 
 
