@@ -19,6 +19,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 from Usuarios.views import loginPage, register, home, logoutUser
 from LandingPage.views import LandingPage
+from Tienda.views import tienda, agregar_producto, eliminar_producto, restar_producto, limpiar_carrito
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,6 +29,11 @@ urlpatterns = [
     path('register/', register, name='register'),
     path('home/', home,  name='home'),
     path('', LandingPage.as_view(),  name='landing_page'),
+    path ('tienda/', tienda, name='Tienda'),
+    path('agregar/<int:producto_id>/', agregar_producto, name="Add"),
+    path('eliminar/<int:producto_id>/', eliminar_producto, name="Del"),
+    path('restar/<int:producto_id>/', restar_producto, name="Sub"),
+    path('limpiar/', limpiar_carrito, name="CLS"),
 
 ]
 

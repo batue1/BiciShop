@@ -37,6 +37,7 @@ class Material_Cuadro(models.Model):
     def __str__(self):
           return self.descripcion
 
+
 #---------------------------------------------------------------------------------------------------------------#
 class Producto(models.Model):
     producto    = models.AutoField(primary_key= True)
@@ -52,14 +53,17 @@ class Producto(models.Model):
     usado       = models.BooleanField( default= False)
     publicar    = models.BooleanField()
 
-    if usado == True:
-        def __str__(self):
-              return '%s usada, rodado %s '  % (self.tipo, self.rodado)
-    else:
-        def __str__(self):
-              return '%s nueva, rodado %s '  % (self.tipo, self.rodado)
+    def __str__(self):
+        return f'{self.producto} -> {self.tipo}  -> {self.rodado} -> {self.color} -> {self.material} -> {self.descripcion} -> {self.precio} -> {self.descuento} -> {self.cantidad}  -> {self.imagen} -> {self.usado}'
 
+    #if usado == True:
+    #   def __str__(self):
+    #         return '%s usada, rodado %s '  % (self.tipo, self.rodado)
+    #else:
+    #   def __str__(self):
+    #         return '%s nueva, rodado %s '  % (self.tipo, self.rodado)
 
+    objects = models.Manager()  
 #---------------------------------------------------------------------------------------------------------------#
 class Estado_Pedido(models.Model):
     estadoPedido = models.AutoField(primary_key= True) 

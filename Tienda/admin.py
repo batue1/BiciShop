@@ -7,11 +7,11 @@ from Tienda.models import Pedidos_Cabecera, Pedidos_linea, Forma_Pago, Estado_Pe
 # Register your models here.
 #---------------------------------------------------------------------------------------------------------------#
 #Tablas de BD que el superuser va a poder ABM con las opciones por defecto
+
 admin.site.register(Tipos_Bicicleta)
 admin.site.register(Rodado)
 admin.site.register(Color)
 admin.site.register(Material_Cuadro)
-
 admin.site.register(Forma_Pago)
 admin.site.register(Estado_Pedido)
 
