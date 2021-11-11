@@ -22,7 +22,7 @@ class Secciones(models.Model):
     titulo = models.CharField(max_length=255)
     sub_titulo = models.TextField()
     descripcion = models.TextField()
-    imagen = models.CharField(max_length=255)
+    imagen = models.ImageField('Foto', upload_to= "fotos" )
     pagina = models.ForeignKey(
         Pagina, on_delete=models.CASCADE, related_name='secciones'
     )
