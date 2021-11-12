@@ -38,8 +38,10 @@
                                 <div class = "caja2"><p>{{producto.color}}</p></div>
                                 <div class = "caja3"><p>{{producto.descuento}}</p></div>
                                 <div class = "caja4"><p>{{producto.precio}}</p></div>
-
-                                <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                                <a href="{% url 'Add' producto.producto %}" class="btn btn-primary">Agregar al carrito</a>
+                                <!--- 
+                                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                                --->
                             </div>
                             </div>
                         </div>

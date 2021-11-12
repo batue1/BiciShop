@@ -86,8 +86,14 @@
 			@media (min-width: 992px) {
 			.rounded-lg-3 { border-radius: .3rem; }
 			}
+		.card-producto-imagen {
+    		display: block;
+  			margin-left: auto;
+  			margin-right: auto;
+ 			 width: 50%;
+		}
 	</style>
-
+    
 </head>
 <body>
 
@@ -118,8 +124,11 @@
 				<h1 class="display-4 fw-bold">{{ seccion.titulo }}</h1>
 				<div class="col-lg-6 mx-auto">
 				<p class="lead mb-4">{{ seccion.descripcion }}</p>
-				</div>
 			</div>
+			
+			<div class ="card-producto-imagen"><img src="{{seccion.imagen.url}}" alt="{{imagen.imagen}}" class="card-img-top img-fluid" ></img></div>
+			
+		</div>
 		{% endfor %}
 		<footer class="py-3 my-4">
 			<p class="text-center text-muted">&copy; {{ empresa.nombre }}</p>

@@ -140,12 +140,13 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'CORE/static'),)
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #---------------------------------------------------------------------------------------------------------------#
+#MEDIA_URL = 'CORE/static/mediaimg/'
+MEDIA_URL = '/media/'
+# Donde la carpeta esta alojada
 #La siguiente lógica es para las imágenes que se van a cargar.
 # Para cuando se consulte por una imagen mediante URL
-MEDIA_URL = 'CORE/static/mediaimg/'
-# Donde la carpeta esta alojada
-#MEDIA_ROOT = os.path.join(BASE_DIR / "media")
-MEDIA_ROOT = os.path.join(BASE_DIR / "CORE/static/mediaimg/")
+MEDIA_ROOT = os.path.join(BASE_DIR / "media")
+#MEDIA_ROOT = os.path.join(BASE_DIR / "CORE/static/mediaimg/")
 
 
 

@@ -10,19 +10,24 @@ def tienda(request):
 
 def agregar_producto(request, producto_id):
     carrito = Carrito(request)
-    producto = Producto.objects.get(id=producto_id)
-    carrito.agregar(producto)
+    # En la BD la clave de Producto es producto
+    bicicleta = Producto.objects.get(producto=producto_id)
+    #producto = Producto.objects.get(id=producto_id)
+    #carrito.agregar(producto)
+    carrito.agregar(bicicleta)
     return redirect("Tienda")
 
 def eliminar_producto (request, producto_id):
     carrito = Carrito(request)
-    producto = Producto.objects.get(id=producto_id)
+    #producto = Producto.objects.get(id=producto_id)
+    producto = Producto.objects.get(producto=producto_id)
     carrito.eliminar(producto)
     return redirect("Tienda")
 
 def restar_producto (request, producto_id):
     carrito = Carrito(request)
-    producto = Producto.objects.get(id=producto_id)
+    #producto = Producto.objects.get(id=producto_id)
+    producto = Producto.objects.get(producto=producto_id)
     carrito.restar(producto)
     return redirect("Tienda")
 
