@@ -1,7 +1,7 @@
 from django.db import models
 from Usuarios.models import User
 from django.core.validators import MaxLengthValidator, MaxValueValidator, MinValueValidator
-
+from django.utils.html import format_html
 
 # Create your models here.
 
@@ -49,12 +49,12 @@ class Producto(models.Model):
     precio      = models.DecimalField(max_digits=10, decimal_places=2, default=150000.0)
     descuento   = models.DecimalField(max_digits=5, decimal_places=2, default=0.00)
     cantidad    = models.IntegerField(null= False, default= 0)
-    imagen      = models.ImageField('Foto', upload_to= "fotos" )
+    imagen      = models.ImageField( upload_to= "fotos" , null=True)
     usado       = models.BooleanField( default= False)
     publicar    = models.BooleanField()
 
     def __str__(self):
-        return f'{self.producto} -> {self.tipo}  -> {self.rodado} -> {self.color} -> {self.material} -> {self.descripcion} -> {self.precio} -> {self.descuento} -> {self.cantidad}  -> {self.imagen} -> {self.usado}'
+        return f'{self.producto} -> {self.tipo}  -> {self.rodado} -> {self.color} -> {self.material} -> {self.descripcion} -> {self.precio} -> {self.descuento} -> {self.cantidad}  -> {self.imagen.ur} -> {self.usado}'
 
     #if usado == True:
     #   def __str__(self):

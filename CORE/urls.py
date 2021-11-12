@@ -34,8 +34,8 @@ urlpatterns = [
     path('eliminar/<int:producto_id>/', eliminar_producto, name="Del"),
     path('restar/<int:producto_id>/', restar_producto, name="Sub"),
     path('limpiar/', limpiar_carrito, name="CLS"),
-
 ]
+   # urlpatterns  += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 #Ojo no sirve para producción
 if settings.DEBUG:
