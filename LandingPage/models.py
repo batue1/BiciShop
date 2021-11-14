@@ -26,4 +26,7 @@ class Secciones(models.Model):
     pagina = models.ForeignKey(
         Pagina, on_delete=models.CASCADE, related_name='secciones'
     )
+    redirect_to = models.CharField(
+        max_length=255
+    )
 

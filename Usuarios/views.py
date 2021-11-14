@@ -17,7 +17,7 @@ class CreateUserForm(UserCreationForm):
 def register(request):
     #Chequeadmos si ya esta autenticado
     if request.user.is_authenticated:
-        return redirect('home')
+        return redirect('landing_page')
 
     form = CreateUserForm()
 
@@ -36,7 +36,7 @@ def register(request):
 #------------------------------------------------------------------------------------#
 def loginPage(request):
     if request.user.is_authenticated:
-        return redirect('home')
+        return redirect('landing_page')
 
     #Chequeamos si ya se logeó
     if request.method == 'POST':
@@ -48,7 +48,7 @@ def loginPage(request):
 
         if user is not None:
             login(request, user)
-            return redirect('home')
+            return redirect('landing_page')
         else:
             messages.info(request, 'Usuario o contraseña incorrecto' )
     context ={}
