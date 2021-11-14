@@ -1,10 +1,31 @@
 body {
-    background-color: black;
+    font-family: Roboto;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 42px;
+    letter-spacing: 0em;
+    text-align: center;
 }
 
-h1{
-    color:blueviolet;
+h1, h2, h3, h4, title {
+    color: #68A885;
     font-family: Roboto;
-    
+}
 
+.naranja {
+    color: #FF3D00
+}
+
+p {
+    font-family: Roboto;
+    color: #FF3D00
+}
+
+.verde {
+    color: #68A885
+}
+
+.verdeclaro {
+    color: 74cfbf
 }
