@@ -1,0 +1,9 @@
+$font: "Monospace";
+$colorTitulo: white(87, 123, 201);
+$fontTitulo: "Oswald", sans-serif;
+$colorPrincipal: #0f2027;
+
+@mixin titulos($colorTitulo, $font) {
+  color: $colorTitulo;
+  font-family: $fontTitulo;
+}
