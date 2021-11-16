@@ -5,11 +5,13 @@ html {
     height: 100%;
     background: white !important;
 }
+
 img {
     max-width: 20%;
     height: 55%;
     margin-right: auto;
-  }
+}
+
 .user_card {
     width: 350px;
     margin-top: auto;
@@ -26,9 +28,7 @@ img {
     border-radius: 5px;
     margin: auto;
     width: 30%;
-    
 }
-
 
 .form_container {
     margin-top: 20px;

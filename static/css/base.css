@@ -8,8 +8,12 @@ body {
     text-align: center;
 }
 
-h1, h2, h3, h4, title {
-    color: #68A885;
+h1,
+h2,
+h3,
+h4,
+title {
+    color: #99DEA9;
     font-family: Roboto;
 }
 
@@ -27,5 +31,5 @@ p {
 }
 
 .verdeclaro {
-    color: 74cfbf
+    color: #99DEA9
 }

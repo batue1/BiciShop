@@ -1,0 +1,61 @@
+//Contact Us
+.contactUs {
+  margin-top: 20px;
+  min-height: 600px;
+  max-width: 500px;
+  height: 80vh;
+  width: 98%;
+  margin: auto;
+  margin-bottom: 40px;
+}
+.contact-container {
+  height: 99%;
+  width: 100%;
+  padding: 0.4rem;
+  background: rgba(7, 43, 83, 0.862);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  position: relative;
+}
+.formContact {
+  width: 120%;
+}
+.contact-container form fieldset {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+.legend {
+  font-size: 25px;
+}
+.contact__input {
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 40px;
+}
+.radio {
+  cursor: pointer;
+}
+.select {
+  cursor: pointer;
+}
+.checkbox {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+.send-form {
+  cursor: pointer;
+  width: 100%;
+  height: 40px;
+  background: #0a830a;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.send-form:hover {
+  background: rgb(81, 156, 5);
+}
