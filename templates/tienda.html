@@ -1,182 +1,160 @@
 {% load static %}
-<link href= "{% static 'tienda/css/main.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'tienda/css/main.css' %}" rel="stylesheet" type="text/css">
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BiciShop - Tienda oficial</title>
-    <link href= "{% static '/assets/images/logo.png' %}" rel="shortcut icon" type="text/css">
-    <meta
-      name="description"
-      content="Página oficial de HardStore; tienda online de BICICLETAS en Argentina"
-    />
-    <meta
-      name="keywords"
-      content="bicicletas argentina, bici, argentina, Argentina, Bicicletas Argentina, tienda online, tienda, pagina online, web bicicletas, rodados, ruedas, BiciShop oficial, BiciShop online, ruedas, cubiertas, cuadros bicicletas,"
-    />
-    <meta
-      name="google-site-verification"
-      content="L8zQ7MU_a28Ujtb8aD_HkI19bLeEBCopyBnDEcwPv3k"
-    />
+    <link href="{% static '/assets/images/logo.png' %}" rel="shortcut icon" type="text/css">
+    <meta name="description" content="Página oficial de HardStore; tienda online de BICICLETAS en Argentina" />
+    <meta name="keywords" content="bicicletas argentina, bici, argentina, Argentina, Bicicletas Argentina, tienda online, tienda, pagina online, web bicicletas, rodados, ruedas, BiciShop oficial, BiciShop online, ruedas, cubiertas, cuadros bicicletas," />
+    <meta name="google-site-verification" content="L8zQ7MU_a28Ujtb8aD_HkI19bLeEBCopyBnDEcwPv3k" />
     <link rel="cannonical" href="" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
-    />
-    <link href= "{% static 'tienda/css/normalize.css' %}" rel="stylesheet" type="text/css">
-    <link href= "{% static 'tienda/css/main.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link href="{% static 'tienda/css/normalize.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'tienda/css/main.css' %}" rel="stylesheet" type="text/css">
 
-    <script
-      src="https://kit.fontawesome.com/b6e2e379a5.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+    <script src="https://kit.fontawesome.com/b6e2e379a5.js" crossorigin="anonymous"></script>
+</head>
 
-  <body>
+<body>
 
     <div id="mainMenu" class="sideBar">
-      <ul>
-        <div id="newBar" class="fas fa-times fa-lg"></div>
-        <li class="About"><a href="#about">About us</a></li>
-        <li class="Contact"><a href="#contact">Contact</a></li>
-      </ul>
+        <ul>
+            <div id="newBar" class="fas fa-times fa-lg"></div>
+            <li class="About"><a href="#about">About us</a></li>
+            <li class="Contact"><a href="#contact">Contact</a></li>
+        </ul>
     </div>
 
-    <header class="header">
+    <header class="header" style="background-color: #99DEA9; font-family: Roboto" ;>
 
-      <div class="header__container">
+        <div class="header__container">
 
-        <div class="title-nav">
-          
-          <div id="mainBars" class="bars">
-            
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          
-          <div class="titulo">
-            <a href="index.html"><h1 class="titulo__h1 link">BiciShop</h1></a>
-            <img
-            src="{% static '/tienda/assets/images/logo.ico' %}"
-            alt="titulo__logo"
-            />
-          </div>
+            <div class="title-nav">
+
+                <div id="mainBars" class="bars">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="titulo">
+                    <a href="landing_page.html">
+                        <h1 class="titulo__h1 link">BiciShop</h1>
+                    </a>
+                    <img src="{% static '/tienda/assets/images/logo.png' %}" alt="titulo__logo" />
+                </div>
+
+            </div>
+
+            <div class="finder-cart">
+
+                <div class="lupa">
+                    <i class="fas fa-search"></i>
+                </div>
+
+                <form class="buscador" id="finder">
+                    <input id="input" placeholder="Buscar..." type="text" />
+                    <i id="closeFinder" class="fas fa-times"></i>
+                </form>
+
+                <div id="car" class="shopCar">
+                    <i class="fas fa-cart-arrow-down fa-lg"></i>
+                    <span id="counter">0</span>
+                </div>
+
+            </div>
 
         </div>
-
-        <div class="finder-cart">
-          
-          <div class="lupa">
-            <i class="fas fa-search"></i>
-          </div>
-
-          <form class="buscador" id="finder">
-            <input id="input" placeholder="Buscar..." type="text" />
-            <i id="closeFinder" class="fas fa-times"></i>
-          </form>
-          
-          <div id="car" class="shopCar">
-            <i class="fas fa-cart-arrow-down fa-lg"></i>
-            <span id="counter">0</span>
-          </div>
-
-        </div>
-
-      </div>
 
     </header>
     <main id="tienda" class="container">
-      <div class="modal__container">
-        <article id="modal" class="checkout-modal">
-          <i
-          id="modalClose"
-          style="color: rgb(10, 5, 5); cursor: pointer; margin: 5px;"
-          class="fas fa-times-circle fa-2x">
-          </i>  
+        <div class="modal__container">
+            <article id="modal" class="checkout-modal">
+                <i id="modalClose" style="color: rgb(10, 5, 5); cursor: pointer; margin: 5px;" class="fas fa-times-circle fa-2x">
+          </i>
 
-          <div class="form"></div>
+                <div class="form"></div>
 
-            <form id="formulario" method="POST" action="https://formsubmit.co/nicojoaquin1998@gmail.com"  name = "formulario-pago">
+                <form id="formulario" method="POST" action="https://formsubmit.co/nicojoaquin1998@gmail.com" name="formulario-pago">
 
-              <fieldset>
+                    <fieldset>
 
-                <legend style="color: black;"><h2>Ingrese sus datos</h2> </legend>
-            
-                <div class="form__fields">                     
-                  <div class="form__name">
-                    <label for="nombre">Nombre</label>
-                    <br>                
-                    <input type="text" id="nombre" name="name" placeholder="Ingrese su nombre" maxlength = "20" required />
-                    <br>
-                    <br>
-                    <label for="apellido">Apellido</label>  
-                    <br>
-                    <input type="text" id="apellido" name="lastName" placeholder="Ingrese su apellido" maxlength = "20" required />
-                    <br>
-                    <br>                 
-                  </div>
+                        <legend style="color: black;">
+                            <h2>Ingrese sus datos</h2>
+                        </legend>
 
-                  <div class="form__data">
-                    <label for="email">Email</label>                 
-                    <br>
-                    <input type="email" id="email"  name="email" placeholder="Email Address" maxlength = "30" required />
-                    <br>
-                    <br>
-                    <label for="telefono">Teléfono</label>               
-                    <br>
-                    <input type="text" id="telefono" name="telefono" placeholder="Ingrese su número" maxlength = "10" required />                
-                  </div>
-                </div>
-                          
-                <div class="metodos">
-                  <br>
-                  <br>
-                  <label for="metodo" style="font-style: italic; border-bottom: 1px solid black;" ><i class="fas fa-money-check-alt"></i> Método de pago</i></label>
-                  <br>
-                  <br>
-                  <input type="radio" value="tarjeta" name="metodo" required>
-                  <label for="tarjeta">Tarjeta de crédito/débito <i class="fas fa-credit-card"></i></label>
-                  <br>
-                  <br>
-                  <input type="radio" value="banco" name="metodo" required>
-                  <label for="banco">Transferencia bancaria <i class="fas fa-university"></i></label>
-                  <br>
-                  <br>
-                </div>
-                
-                <div class="total-button">
-                  <h3 id=formTotal style = "color: black; text-align: center"></h3>
-                  <br>               
-                  <div class="form__buttons">                 
-                    <input type="submit" value="Ir a pagar" class="pay__button">
-                  </div>
-                </div>
+                        <div class="form__fields">
+                            <div class="form__name">
+                                <label for="nombre">Nombre</label>
+                                <br>
+                                <input type="text" id="nombre" name="name" placeholder="Ingrese su nombre" maxlength="20" required />
+                                <br>
+                                <br>
+                                <label for="apellido">Apellido</label>
+                                <br>
+                                <input type="text" id="apellido" name="lastName" placeholder="Ingrese su apellido" maxlength="20" required />
+                                <br>
+                                <br>
+                            </div>
 
-                <div class="loader-container">  
-                  <img id="dataLoader" class="loader" src="{% static '/tienda/assets/contact.gif' %}"  alt="loader"> 
-                </div>
-                          
-              </fieldset>
+                            <div class="form__data">
+                                <label for="email">Email</label>
+                                <br>
+                                <input type="email" id="email" name="email" placeholder="Email Address" maxlength="30" required />
+                                <br>
+                                <br>
+                                <label for="telefono">Teléfono</label>
+                                <br>
+                                <input type="text" id="telefono" name="telefono" placeholder="Ingrese su número" maxlength="10" required />
+                            </div>
+                        </div>
 
-            </form>
+                        <div class="metodos">
+                            <br>
+                            <br>
+                            <label for="metodo" style="font-style: italic; border-bottom: 1px solid black;"><i class="fas fa-money-check-alt"></i> Método de pago</i></label>
+                            <br>
+                            <br>
+                            <input type="radio" value="tarjeta" name="metodo" required>
+                            <label for="tarjeta">Tarjeta de crédito/débito <i class="fas fa-credit-card"></i></label>
+                            <br>
+                            <br>
+                            <input type="radio" value="banco" name="metodo" required>
+                            <label for="banco">Transferencia bancaria <i class="fas fa-university"></i></label>
+                            <br>
+                            <br>
+                        </div>
 
-          </div>
-           <template id="template">          
+                        <div class="total-button">
+                            <h3 id=formTotal style="color: black; text-align: center"></h3>
+                            <br>
+                            <div class="form__buttons">
+                                <input type="submit" value="Ir a pagar" class="pay__button">
+                            </div>
+                        </div>
+
+                        <div class="loader-container">
+                            <img id="dataLoader" class="loader" src="{% static '/tienda/assets/contact.gif' %}" alt="loader">
+                        </div>
+
+                    </fieldset>
+
+                </form>
+
+        </div>
+        <template id="template">          
              <p class = "message" >
                Gracias <span id="nameSpan"></span> por confiar en nosotros!
                <br>
@@ -195,35 +173,30 @@
           </template>
 
         </article>
-      </div>
-      <div id="carScreen" class="car-screen">
-        <h2>Agregue productos aquí...</h2>
-        <div class="checkout-class">
-          <button id="s" style="border: none; cursor: pointer">
+        </div>
+        <div id="carScreen" class="car-screen">
+            <h2>Agregue productos aquí...</h2>
+            <div class="checkout-class">
+                <button id="s" style="border: none; cursor: pointer">
             <h3 style="color: rgb(243, 237, 237)">Ir al checkout</h3>
           </button>
-          <button id="s" style="border: none; cursor: pointer">
+                <button id="s" style="border: none; cursor: pointer">
             <h4 class="vaciarCarrito" style="color: rgb(243, 237, 237)">Vaciar carrito</h4>
           </button>
+            </div>
+            <h3 id="total" style="color: black">Total: $0</h3>
+            <hr />
         </div>
-        <h3 id="total" style="color: black">Total: $0</h3>
-        <hr />
-      </div>
-      <section class="store">
-        <div class="nav__btn">
-          <div id="nav__hamburger" class="nav_hamburger">
-            <i id="ham" class="uil uil-bars"></i>
-          </div>
-        </div>
-        <nav id="nav" class="store__category">
-          <ul id="nav-menu" class="store__links">
-            <li>
-              <a
-                id="activeClass"
-                href="#"
-                class="store__category--item active"
-                category="all"
-                >Todos los Modelos</a
+        <section class="store">
+            <div class="nav__btn">
+                <div id="nav__hamburger" class="nav_hamburger">
+                    <i id="ham" class="uil uil-bars"></i>
+                </div>
+            </div>
+            <nav id="nav" class="store__category">
+                <ul id="nav-menu" class="store__links">
+                    <li>
+                        <a id="activeClass" href="#" class="store__category--item active" category="all">Todos los Modelos</a
               >
             </li>
             <li>

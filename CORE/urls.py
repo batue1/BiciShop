@@ -34,6 +34,7 @@ urlpatterns = [
     path('eliminar/<int:producto_id>/', eliminar_producto, name="Del"),
     path('restar/<int:producto_id>/', restar_producto, name="Sub"),
     path('limpiar/', limpiar_carrito, name="CLS"),
+    path('tienda/landing_page.html/', LandingPage.as_view(),  name='landing_page'),
 ]
    # urlpatterns  += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
